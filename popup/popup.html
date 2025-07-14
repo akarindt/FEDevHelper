@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="../assets/styles/reset.css" />
+        <link rel="stylesheet" href="../assets/styles/global.css" />
+        <link rel="stylesheet" href="./popup.css" />
+    </head>
+    <body class="popup__body--container">
+        <div class="popup__title--container">
+            <div class="popup__title--info">
+                <span class="popup__title--text">🔎 FEDevHelper</span>
+                <p class="popup__title--description">To all my fellow Front-End Developers</p>
+            </div>
+            <img
+                class="popup__title--logo"
+                src="../assets/icons/icon48.png"
+                alt="FEDevHelper Logo"
+            />
+        </div>
+        <div class="popup__content--container">
+            <button class="popup__content--button" id="font-detector">
+                <span class="popup__content--button-icon">🖊️</span>
+                <div class="popup__content--button-text-container">
+                    <span class="popup__content--button-text">Font detector</span>
+                    <span class="popup__content--button-description"
+                        >Find out what fonts this website used.</span
+                    >
+                </div>
+            </button>
+
+            <button class="popup__content--button" id="check-loadtime">
+                <span class="popup__content--button-icon">⏰</span>
+                <div class="popup__content--button-text-container">
+                    <span class="popup__content--button-text">Check load time</span>
+                    <span class="popup__content--button-description"
+                        >Find out how long it takes for this website to load.</span
+                    >
+                </div>
+            </button>
+
+            <button class="popup__content--button" id="uri-encoder-decoder">
+                <span class="popup__content--button-icon">🔗</span>
+                <div class="popup__content--button-text-container">
+                    <span class="popup__content--button-text">URI Decoder & Encoder</span>
+                    <span class="popup__content--button-description"
+                        >Decode or encode URIs for easier handling.</span
+                    >
+                </div>
+            </button>
+        </div>
+        <div class="popup__footer--container">
+            <span>Made with ❤️ by Akari</span>
+            <span class="popup__footer--version">v0.0.1</span>
+        </div>
+    </body>
+    <script src="./popup.js"></script>
+</html>

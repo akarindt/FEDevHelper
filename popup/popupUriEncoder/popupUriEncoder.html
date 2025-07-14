@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>URI Encoder & Decoder - FEDevHelper</title>
+        <link rel="stylesheet" href="../../assets/styles/reset.css" />
+        <link rel="stylesheet" href="../../assets/styles/global.css" />
+        <link rel="stylesheet" href="./popupUriEncoder.css" />
+    </head>
+    <body>
+        <div class="popup-uri__window">
+            <div class="popup-uri__header">
+                <h1>URI Encoder & Decoder 🔗</h1>
+                <div class="popup-uri__description">
+                    <p>Encode or decode URIs for easier handling and debugging</p>
+                </div>
+            </div>
+
+            <div class="popup-uri__content">
+                <div class="popup-uri__section">
+                    <label for="popup-uri__input" class="popup-uri__label">Input URI:</label>
+                    <textarea
+                        id="popup-uri__input"
+                        class="popup-uri__textarea"
+                        placeholder="Enter your URI here to encode or decode..."
+                        rows="4"
+                    ></textarea>
+                </div>
+
+                <div class="popup-uri__actions">
+                    <button
+                        id="popup-uri__encode-btn"
+                        class="popup-uri__button popup-uri__button--primary"
+                    >
+                        Encode URI
+                    </button>
+                    <button
+                        id="popup-uri__decode-btn"
+                        class="popup-uri__button popup-uri__button--secondary"
+                    >
+                        Decode URI
+                    </button>
+                    <button
+                        id="popup-uri__clear-btn"
+                        class="popup-uri__button popup-uri__button--clear"
+                    >
+                        Clear
+                    </button>
+                </div>
+
+                <div class="popup-uri__section">
+                    <label for="popup-uri__output" class="popup-uri__label">Output:</label>
+                    <textarea
+                        id="popup-uri__output"
+                        class="popup-uri__textarea popup-uri__textarea--output"
+                        placeholder="Encoded or decoded URI will appear here..."
+                        rows="4"
+                        readonly
+                    ></textarea>
+                </div>
+
+                <div class="popup-uri__actions">
+                    <button
+                        id="popup-uri__copy-btn"
+                        class="popup-uri__button popup-uri__button--copy"
+                    >
+                        Copy Result
+                    </button>
+                </div>
+
+                <div class="popup-uri__examples">
+                    <h3>Examples:</h3>
+                    <div class="popup-uri__example">
+                        <strong>Original:</strong> https://example.com/search?q=hello world&type=web
+                    </div>
+                    <div class="popup-uri__example">
+                        <strong>Encoded:</strong>
+                        https%3A//example.com/search%3Fq%3Dhello%20world%26type%3Dweb
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./popupUriEncoder.js"></script>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Font Detector - FEDevHelper</title>
+        <link rel="stylesheet" href="../../assets/styles/reset.css" />
+        <link rel="stylesheet" href="../../assets/styles/global.css" />
+        <link rel="stylesheet" href="./popupFont.css" />
+    </head>
+    <body>
+        <div class="popup-font__window">
+            <div class="popup-font__header">
+                <h1>Detected Fonts 🖊️</h1>
+                <div class="popup-font__description">
+                    <p>Fonts found on the current URL:</p>
+                    <a id="popup-font__url"></a>
+                </div>
+            </div>
+
+            <div id="popup-font__loading">Loading detected fonts...</div>
+            <div id="popup-font__list-container" style="display: none">
+                <div id="popup-font__list"></div>
+                <button id="popup-font__button--copy">Copy as CSS</button>
+            </div>
+            <div id="popup-font__no-fonts" style="display: none">
+                No fonts detected. Please try running the font detector again.
+            </div>
+        </div>
+        <script src="./popupFont.js"></script>
+    </body>
+</html>

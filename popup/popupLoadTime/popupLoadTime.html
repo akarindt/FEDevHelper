@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Load Time Checker - FEDevHelper</title>
+        <link rel="stylesheet" href="../../assets/styles/reset.css" />
+        <link rel="stylesheet" href="../../assets/styles/global.css" />
+        <link rel="stylesheet" href="./popupLoadTime.css" />
+    </head>
+    <body>
+        <div class="popup-loadtime__window">
+            <div class="popup-loadtime__header">
+                <h1>Load Time Analysis ⏰</h1>
+                <div class="popup-loadtime__description">
+                    <p>Performance metrics for the current URL:</p>
+                    <a id="popup-loadtime__url"></a>
+                </div>
+            </div>
+
+            <div id="popup-loadtime__loading">Analyzing page load performance...</div>
+            <div id="popup-loadtime__metrics-container" style="display: none">
+                <div id="popup-loadtime__metrics"></div>
+                <button id="popup-loadtime__button--refresh">Refresh Analysis</button>
+            </div>
+            <div id="popup-loadtime__no-data" style="display: none">
+                No performance data available. Please try refreshing the page and running the
+                analysis again.
+            </div>
+        </div>
+        <script src="./popupLoadTime.js"></script>
+    </body>
+</html>

@@ -1,0 +1,141 @@
+.popup-font__window {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.popup-font__header {
+    text-align: left;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 16px;
+}
+
+.popup-font__header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--color-text);
+}
+
+.popup-font__description {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.popup-font__description p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.popup-font__description a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.2s ease;
+    max-width: fit-content;
+}
+
+.popup-font__description a:hover {
+    color: #1d4ed8;
+}
+
+#popup-font__list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#popup-font__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 10px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 20px;
+}
+
+#popup-font__button--copy {
+    padding: 10px 20px;
+    cursor: pointer;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+    align-self: center;
+}
+
+#popup-font__button--copy:hover {
+    background: #2563eb;
+}
+
+#popup-font__button--copy:active {
+    background: #1d4ed8;
+}
+
+.popup-font__detail {
+    border: 1px solid #d1d5db;
+    padding: 12px;
+    border-radius: 6px;
+    background: #f9fafb;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    color: #374151;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-break: break-word;
+}
+
+.popup-font__detail:hover {
+    border-color: #3b82f6;
+    background: #eff6ff;
+    color: #1e40af;
+}
+
+#popup-font__no-fonts {
+    text-align: center;
+    color: #6b7280;
+    font-style: italic;
+    margin-top: 40px;
+    padding: 20px;
+    border: 1px dashed #d1d5db;
+    border-radius: 6px;
+    background: #f9fafb;
+}
+
+#popup-font__loading {
+    text-align: center;
+    color: #6b7280;
+    margin-top: 40px;
+    padding: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    .popup-font__window {
+        padding: 16px;
+        margin: 8px;
+    }
+
+    .popup-font__header h1 {
+        font-size: 20px;
+    }
+
+    #popup-font__list {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 8px;
+    }
+
+    .popup-font__detail {
+        padding: 10px 8px;
+        font-size: 13px;
+        min-height: 45px;
+    }
+}

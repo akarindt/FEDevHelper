@@ -1,0 +1,14 @@
+{
+    "name": "fedevhelper",
+    "version": "0.0.1",
+    "description": "A tools for front-end developers to enhance productivity and streamline workflows.",
+    "main": "index.js",
+    "scripts": {
+        "format": "prettier --write ."
+    },
+    "author": "akarindt",
+    "license": "MIT",
+    "devDependencies": {
+        "prettier": "^3.6.2"
+    }
+}

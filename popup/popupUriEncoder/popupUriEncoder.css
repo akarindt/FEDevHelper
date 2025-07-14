@@ -1,0 +1,217 @@
+.popup-uri__window {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.popup-uri__header {
+    text-align: left;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 16px;
+}
+
+.popup-uri__header h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--color-text);
+}
+
+.popup-uri__description {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.popup-uri__description p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.popup-uri__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.popup-uri__section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.popup-uri__label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.popup-uri__textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-family: "Monaco", "Menlo", "Ubuntu Mono", monospace;
+    font-size: 13px;
+    line-height: 1.4;
+    resize: vertical;
+    transition: border-color 0.2s ease;
+    background-color: #ffffff;
+    color: var(--color-text);
+}
+
+.popup-uri__textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.popup-uri__textarea--output {
+    background-color: #f9fafb;
+    border-color: #e5e7eb;
+}
+
+.popup-uri__actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.popup-uri__button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.popup-uri__button--primary {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.popup-uri__button--primary:hover {
+    background-color: #2563eb;
+}
+
+.popup-uri__button--secondary {
+    background-color: #10b981;
+    color: white;
+}
+
+.popup-uri__button--secondary:hover {
+    background-color: #059669;
+}
+
+.popup-uri__button--clear {
+    background-color: #ef4444;
+    color: white;
+}
+
+.popup-uri__button--clear:hover {
+    background-color: #dc2626;
+}
+
+.popup-uri__button--copy {
+    background-color: #8b5cf6;
+    color: white;
+    margin-left: auto;
+}
+
+.popup-uri__button--copy:hover {
+    background-color: #7c3aed;
+}
+
+.popup-uri__button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.popup-uri__examples {
+    margin-top: 20px;
+    padding: 16px;
+    background-color: #f8fafc;
+    border-radius: 6px;
+    border: 1px solid #e2e8f0;
+    color: #fff;
+}
+
+.popup-uri__examples h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.popup-uri__example {
+    margin-bottom: 8px;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.popup-uri__example strong {
+    font-weight: 600;
+}
+
+.popup-uri__example:last-child {
+    margin-bottom: 0;
+}
+
+/* Success/Error states */
+.popup-uri__textarea--success {
+    border-color: #10b981;
+    background-color: #f0fdf4;
+}
+
+.popup-uri__textarea--error {
+    border-color: #ef4444;
+    background-color: #fef2f2;
+}
+
+/* Loading state */
+.popup-uri__button--loading {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.popup-uri__button--loading::after {
+    content: "...";
+    animation: loading 1s infinite;
+}
+
+@keyframes loading {
+    0%,
+    20% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .popup-uri__textarea {
+        background-color: #1f2937;
+        color: #f9fafb;
+        border-color: #374151;
+    }
+
+    .popup-uri__textarea--output {
+        background-color: #111827;
+        border-color: #374151;
+    }
+
+    .popup-uri__examples {
+        background-color: #1f2937;
+        border-color: #374151;
+    }
+}
