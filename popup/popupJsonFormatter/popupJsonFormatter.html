@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>JSON Formatter - FEDevHelper</title>
+        <link rel="stylesheet" href="../../assets/styles/reset.css" />
+        <link rel="stylesheet" href="../../assets/styles/global.css" />
+        <link rel="stylesheet" href="./popupJsonFormatter.css" />
+    </head>
+    <body>
+        <div class="popup-json__window">
+            <div class="popup-json__header">
+                <h1>JSON Formatter 📄</h1>
+                <div class="popup-json__description">
+                    <p>Format, minify, and validate JSON data with syntax highlighting</p>
+                </div>
+            </div>
+
+            <div class="popup-json__content">
+                <div class="popup-json__section">
+                    <label for="popup-json__input" class="popup-json__label">Input JSON:</label>
+                    <textarea
+                        id="popup-json__input"
+                        class="popup-json__textarea"
+                        placeholder="Enter your JSON data here..."
+                        rows="8"
+                    ></textarea>
+                </div>
+
+                <div class="popup-json__actions">
+                    <button
+                        id="popup-json__format-btn"
+                        class="popup-json__button popup-json__button--primary"
+                    >
+                        Format & Beautify
+                    </button>
+                    <button
+                        id="popup-json__minify-btn"
+                        class="popup-json__button popup-json__button--secondary"
+                    >
+                        Minify
+                    </button>
+                    <button
+                        id="popup-json__validate-btn"
+                        class="popup-json__button popup-json__button--validate"
+                    >
+                        Validate
+                    </button>
+                    <button
+                        id="popup-json__clear-btn"
+                        class="popup-json__button popup-json__button--clear"
+                    >
+                        Clear
+                    </button>
+                </div>
+
+                <div class="popup-json__section">
+                    <label for="popup-json__output" class="popup-json__label">Output:</label>
+                    <textarea
+                        id="popup-json__output"
+                        class="popup-json__textarea popup-json__textarea--output"
+                        placeholder="Formatted JSON will appear here..."
+                        rows="8"
+                        readonly
+                    ></textarea>
+                </div>
+
+                <div class="popup-json__actions">
+                    <button
+                        id="popup-json__copy-btn"
+                        class="popup-json__button popup-json__button--copy"
+                    >
+                        Copy Result
+                    </button>
+                </div>
+
+                <div class="popup-json__status" id="popup-json__status">
+                    <!-- Status messages will appear here -->
+                </div>
+
+                <div class="popup-json__examples">
+                    <h3>Examples:</h3>
+                    <div class="popup-json__example">
+                        <strong>Unformatted:</strong> {"name":"John","age":30,"city":"New York"}
+                    </div>
+                    <div class="popup-json__example">
+                        <strong>Formatted:</strong>
+                        <pre>
+{
+  "name": "John",
+  "age": 30,
+  "city": "New York"
+}</pre
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./popupJsonFormatter.js"></script>
+    </body>
+</html>

@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Fetch Tool - FEDevHelper</title>
+        <link rel="stylesheet" href="../../assets/styles/reset.css" />
+        <link rel="stylesheet" href="../../assets/styles/global.css" />
+        <link rel="stylesheet" href="./popupFetch.css" />
+    </head>
+    <body>
+        <div class="popup-fetch__window">
+            <div class="popup-fetch__header">
+                <h1>Fetch Tool 🌐</h1>
+                <div class="popup-fetch__description">
+                    <p>Make HTTP requests like Postman - works with localhost and any API</p>
+                </div>
+            </div>
+
+            <div class="popup-fetch__content">
+                <div class="popup-fetch__request-section">
+                    <div class="popup-fetch__url-section">
+                        <div class="popup-fetch__method-url">
+                            <select id="popup-fetch__method" class="popup-fetch__method-select">
+                                <option value="GET">GET</option>
+                                <option value="POST">POST</option>
+                                <option value="PUT">PUT</option>
+                                <option value="DELETE">DELETE</option>
+                                <option value="PATCH">PATCH</option>
+                                <option value="HEAD">HEAD</option>
+                                <option value="OPTIONS">OPTIONS</option>
+                            </select>
+                            <input
+                                type="text"
+                                id="popup-fetch__url"
+                                class="popup-fetch__url-input"
+                                placeholder="https://api.example.com/endpoint or http://localhost:3000/api"
+                                value="https://jsonplaceholder.typicode.com/posts/1"
+                            />
+                            <button id="popup-fetch__send-btn" class="popup-fetch__send-btn">
+                                Send
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="popup-fetch__tabs">
+                        <button class="popup-fetch__tab active" data-tab="headers">Headers</button>
+                        <button class="popup-fetch__tab" data-tab="body">Body</button>
+                        <button class="popup-fetch__tab" data-tab="auth">Auth</button>
+                    </div>
+
+                    <div class="popup-fetch__tab-content">
+                        <!-- Headers Tab -->
+                        <div id="popup-fetch__headers-tab" class="popup-fetch__tab-panel active">
+                            <div class="popup-fetch__headers-container">
+                                <div class="popup-fetch__header-row">
+                                    <input
+                                        type="text"
+                                        placeholder="Header name"
+                                        class="popup-fetch__header-key"
+                                    />
+                                    <input
+                                        type="text"
+                                        placeholder="Header value"
+                                        class="popup-fetch__header-value"
+                                    />
+                                    <button class="popup-fetch__remove-header">×</button>
+                                </div>
+                            </div>
+                            <button id="popup-fetch__add-header" class="popup-fetch__add-btn">
+                                + Add Header
+                            </button>
+                        </div>
+
+                        <!-- Body Tab -->
+                        <div id="popup-fetch__body-tab" class="popup-fetch__tab-panel">
+                            <div class="popup-fetch__body-type">
+                                <label>
+                                    <input type="radio" name="bodyType" value="none" checked />
+                                    None
+                                </label>
+                                <label>
+                                    <input type="radio" name="bodyType" value="json" />
+                                    JSON
+                                </label>
+                                <label>
+                                    <input type="radio" name="bodyType" value="text" />
+                                    Text
+                                </label>
+                                <label>
+                                    <input type="radio" name="bodyType" value="form" />
+                                    Form Data
+                                </label>
+                            </div>
+                            <textarea
+                                id="popup-fetch__body-content"
+                                class="popup-fetch__body-textarea"
+                                placeholder="Request body content"
+                                disabled
+                            ></textarea>
+                        </div>
+
+                        <!-- Auth Tab -->
+                        <div id="popup-fetch__auth-tab" class="popup-fetch__tab-panel">
+                            <div class="popup-fetch__auth-type">
+                                <label>
+                                    <input type="radio" name="authType" value="none" checked />
+                                    None
+                                </label>
+                                <label>
+                                    <input type="radio" name="authType" value="bearer" />
+                                    Bearer Token
+                                </label>
+                                <label>
+                                    <input type="radio" name="authType" value="basic" />
+                                    Basic Auth
+                                </label>
+                            </div>
+                            <div id="popup-fetch__auth-content">
+                                <!-- Auth inputs will be populated by JavaScript -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popup-fetch__response-section">
+                    <div class="popup-fetch__response-header">
+                        <h3>Response</h3>
+                        <div id="popup-fetch__status" class="popup-fetch__status"></div>
+                        <div id="popup-fetch__time" class="popup-fetch__time"></div>
+                    </div>
+
+                    <div class="popup-fetch__response-tabs">
+                        <button class="popup-fetch__response-tab active" data-tab="response-body">
+                            Body
+                        </button>
+                        <button class="popup-fetch__response-tab" data-tab="response-headers">
+                            Headers
+                        </button>
+                    </div>
+
+                    <div class="popup-fetch__response-content">
+                        <div
+                            id="popup-fetch__response-body"
+                            class="popup-fetch__response-panel active"
+                        >
+                            <div class="popup-fetch__response-controls">
+                                <button
+                                    id="popup-fetch__prettify-btn"
+                                    class="popup-fetch__control-btn"
+                                >
+                                    Prettify
+                                </button>
+                                <button
+                                    id="popup-fetch__copy-response-btn"
+                                    class="popup-fetch__control-btn"
+                                >
+                                    Copy
+                                </button>
+                            </div>
+                            <pre id="popup-fetch__response-text" class="popup-fetch__response-text">
+Click "Send" to make a request
+                            </pre>
+                        </div>
+                        <div id="popup-fetch__response-headers" class="popup-fetch__response-panel">
+                            <pre
+                                id="popup-fetch__response-headers-text"
+                                class="popup-fetch__response-text"
+                            ></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popup-fetch__quick-actions">
+                    <button id="popup-fetch__save-btn" class="popup-fetch__action-btn">
+                        Save Request
+                    </button>
+                    <button id="popup-fetch__load-btn" class="popup-fetch__action-btn">
+                        Load Request
+                    </button>
+                    <button id="popup-fetch__clear-btn" class="popup-fetch__action-btn">
+                        Clear All
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script src="./popupFetch.js"></script>
+    </body>
+</html>

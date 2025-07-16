@@ -1,5 +1,5 @@
 .popup__body--container {
-    min-width: 400px;
+    min-width: 450px;
     min-height: 400px;
 }
 
@@ -30,12 +30,13 @@
 
 .popup__content--container {
     padding: 10px 20px;
-    min-height: 300px;
+    max-height: 400px;
     width: 100%;
     background-color: var(--content-container-bg);
     display: flex;
     flex-direction: column;
     gap: 10px;
+    overflow-y: scroll;
 }
 
 .popup__title--info {

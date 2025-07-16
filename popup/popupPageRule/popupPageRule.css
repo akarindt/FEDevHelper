@@ -1,0 +1,312 @@
+.popup-rule__window {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    overflow-y: auto;
+}
+
+.popup-rule__header {
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--card-background);
+}
+
+.popup-rule__header h1 {
+    margin: 0 0 8px 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.popup-rule__description p {
+    margin: 0;
+    color: var(--secondary-text-color);
+    font-size: 14px;
+}
+
+.popup-rule__content {
+    padding: 20px;
+}
+
+.popup-rule__current-page {
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.popup-rule__current-page h3 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.popup-rule__current-url {
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+    color: var(--secondary-text-color);
+    word-break: break-all;
+    background-color: var(--background-color);
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+}
+
+.popup-rule__create-section,
+.popup-rule__rules-section,
+.popup-rule__export-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.popup-rule__create-section h3,
+.popup-rule__rules-section h3 {
+    margin: 0 0 20px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.popup-rule__form-group {
+    margin-bottom: 16px;
+}
+
+.popup-rule__label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.popup-rule__input,
+.popup-rule__select,
+.popup-rule__textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.popup-rule__input:focus,
+.popup-rule__select:focus,
+.popup-rule__textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.popup-rule__textarea {
+    resize: vertical;
+    min-height: 80px;
+    font-family: "Courier New", monospace;
+}
+
+.popup-rule__actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.popup-rule__button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1;
+    min-width: 120px;
+}
+
+.popup-rule__button--primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.popup-rule__button--primary:hover {
+    background-color: var(--primary-hover-color);
+}
+
+.popup-rule__button--secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+.popup-rule__button--secondary:hover {
+    background-color: var(--secondary-hover-color);
+}
+
+.popup-rule__button--export {
+    background-color: #10b981;
+    color: white;
+}
+
+.popup-rule__button--export:hover {
+    background-color: #059669;
+}
+
+.popup-rule__button--import {
+    background-color: #8b5cf6;
+    color: white;
+}
+
+.popup-rule__button--import:hover {
+    background-color: #7c3aed;
+}
+
+.popup-rule__button--danger {
+    background-color: #ef4444;
+    color: white;
+}
+
+.popup-rule__button--danger:hover {
+    background-color: #dc2626;
+}
+
+.popup-rule__rules-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.popup-rule__no-rules {
+    text-align: center;
+    color: var(--secondary-text-color);
+    font-style: italic;
+    padding: 20px;
+}
+
+.popup-rule__rule-item {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.popup-rule__rule-item:hover {
+    border-color: var(--primary-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.popup-rule__rule-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.popup-rule__rule-url {
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+    color: var(--primary-color);
+    font-weight: 600;
+    word-break: break-all;
+}
+
+.popup-rule__rule-priority {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.popup-rule__rule-details {
+    margin-bottom: 10px;
+}
+
+.popup-rule__rule-action {
+    font-size: 14px;
+    color: var(--text-color);
+    margin-bottom: 4px;
+}
+
+.popup-rule__rule-custom {
+    font-family: "Courier New", monospace;
+    font-size: 12px;
+    color: var(--secondary-text-color);
+    background-color: var(--card-background);
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    white-space: pre-wrap;
+    margin-top: 8px;
+}
+
+.popup-rule__rule-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.popup-rule__rule-button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.popup-rule__toggle-button {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.popup-rule__toggle-button:hover {
+    background-color: var(--secondary-hover-color);
+}
+
+.popup-rule__toggle-button.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.popup-rule__delete-button {
+    background-color: #ef4444;
+    color: white;
+}
+
+.popup-rule__delete-button:hover {
+    background-color: #dc2626;
+}
+
+.popup-rule__rule-item.disabled {
+    opacity: 0.6;
+}
+
+.popup-rule__rule-item.disabled .popup-rule__rule-url {
+    color: var(--secondary-text-color);
+}
+
+@media (max-width: 600px) {
+    .popup-rule__content {
+        padding: 15px;
+    }
+
+    .popup-rule__actions {
+        flex-direction: column;
+    }
+
+    .popup-rule__button {
+        flex: none;
+        min-width: auto;
+    }
+}

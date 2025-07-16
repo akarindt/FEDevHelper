@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Page Rules - FEDevHelper</title>
+        <link rel="stylesheet" href="../../assets/styles/reset.css" />
+        <link rel="stylesheet" href="../../assets/styles/global.css" />
+        <link rel="stylesheet" href="./popupPageRule.css" />
+    </head>
+    <body>
+        <div class="popup-rule__window">
+            <div class="popup-rule__header">
+                <h1>Page Rules 📋</h1>
+                <div class="popup-rule__description">
+                    <p>Create and manage rules for specific websites</p>
+                </div>
+            </div>
+
+            <div class="popup-rule__content">
+                <div class="popup-rule__current-page">
+                    <h3>Current Page:</h3>
+                    <div id="popup-rule__current-url" class="popup-rule__current-url"></div>
+                </div>
+
+                <div class="popup-rule__create-section">
+                    <h3>Create New Rule</h3>
+
+                    <div class="popup-rule__form-group">
+                        <label for="popup-rule__url-pattern" class="popup-rule__label"
+                            >URL Pattern:</label
+                        >
+                        <input
+                            type="text"
+                            id="popup-rule__url-pattern"
+                            class="popup-rule__input"
+                            placeholder="e.g., *.example.com/* or https://example.com/*"
+                        />
+                    </div>
+
+                    <div class="popup-rule__form-group">
+                        <label for="popup-rule__action" class="popup-rule__label">Action:</label>
+                        <select id="popup-rule__action" class="popup-rule__select">
+                            <option value="block-ads">Block Advertisements</option>
+                            <option value="block-trackers">Block Trackers</option>
+                            <option value="force-https">Force HTTPS</option>
+                            <option value="custom-css">Inject Custom CSS</option>
+                            <option value="disable-js">Disable JavaScript</option>
+                        </select>
+                    </div>
+
+                    <div
+                        class="popup-rule__form-group"
+                        id="popup-rule__custom-content"
+                        style="display: none"
+                    >
+                        <label for="popup-rule__custom-input" class="popup-rule__label"
+                            >Custom CSS:</label
+                        >
+                        <textarea
+                            id="popup-rule__custom-input"
+                            class="popup-rule__textarea"
+                            placeholder="Enter your custom CSS here..."
+                            rows="4"
+                        ></textarea>
+                    </div>
+
+                    <div class="popup-rule__form-group">
+                        <label for="popup-rule__priority" class="popup-rule__label"
+                            >Priority:</label
+                        >
+                        <input
+                            type="number"
+                            id="popup-rule__priority"
+                            class="popup-rule__input"
+                            value="1"
+                            min="1"
+                            max="100"
+                        />
+                    </div>
+
+                    <div class="popup-rule__actions">
+                        <button
+                            id="popup-rule__add-btn"
+                            class="popup-rule__button popup-rule__button--primary"
+                        >
+                            Add Rule
+                        </button>
+                        <button
+                            id="popup-rule__use-current-btn"
+                            class="popup-rule__button popup-rule__button--secondary"
+                        >
+                            Use Current URL
+                        </button>
+                    </div>
+                </div>
+
+                <div class="popup-rule__rules-section">
+                    <h3>Existing Rules</h3>
+                    <div id="popup-rule__rules-list" class="popup-rule__rules-list">
+                        <div class="popup-rule__no-rules">No rules created yet</div>
+                    </div>
+                </div>
+
+                <div class="popup-rule__export-section">
+                    <div class="popup-rule__actions">
+                        <button
+                            id="popup-rule__export-btn"
+                            class="popup-rule__button popup-rule__button--export"
+                        >
+                            Export Rules
+                        </button>
+                        <button
+                            id="popup-rule__import-btn"
+                            class="popup-rule__button popup-rule__button--import"
+                        >
+                            Import Rules
+                        </button>
+                        <input
+                            type="file"
+                            id="popup-rule__file-input"
+                            accept=".json"
+                            style="display: none"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./popupPageRule.js"></script>
+    </body>
+</html>

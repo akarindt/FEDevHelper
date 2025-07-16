@@ -1,6 +1,11 @@
 const fontDetectorButton = document.getElementById("font-detector");
 const checkLoadTimeButton = document.getElementById("check-loadtime");
 const uriEncoderDecoderButton = document.getElementById("uri-encoder-decoder");
+const colorPickerButton = document.getElementById("color-picker");
+const jsonFormatterButton = document.getElementById("json-formatter");
+const lighthouseTestButton = document.getElementById("lighthouse-test");
+const rulerToolButton = document.getElementById("ruler-tool");
+const fetchToolButton = document.getElementById("fetch-tool");
 
 chrome.runtime.onMessage.addListener((message, _) => {
     if (message.fonts) {
@@ -64,6 +69,66 @@ uriEncoderDecoderButton.addEventListener("click", async () => {
         type: "popup",
         width: 600,
         height: 700,
+        focused: true,
+    });
+});
+
+colorPickerButton.addEventListener("click", async () => {
+    chrome.windows.create({
+        url: chrome.runtime.getURL("popup/popupColorPicker/popupColorPicker.html"),
+        type: "popup",
+        width: 600,
+        height: 800,
+        focused: true,
+    });
+});
+
+jsonFormatterButton.addEventListener("click", async () => {
+    chrome.windows.create({
+        url: chrome.runtime.getURL("popup/popupJsonFormatter/popupJsonFormatter.html"),
+        type: "popup",
+        width: 600,
+        height: 900,
+        focused: true,
+    });
+});
+
+lighthouseTestButton.addEventListener("click", async () => {
+    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+    const tabInfo = {
+        url: tab.url,
+        title: tab.title,
+        id: tab.id,
+    };
+
+    localStorage.setItem("lighthouseTabInfo", JSON.stringify(tabInfo));
+    chrome.windows.create({
+        url: chrome.runtime.getURL("popup/popupLighthouse/popupLighthouse.html"),
+        type: "popup",
+        width: 650,
+        height: 800,
+        focused: true,
+    });
+});
+
+rulerToolButton.addEventListener("click", async () => {
+    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+
+    chrome.scripting.executeScript({
+        target: { tabId: tab.id },
+        files: ["scripts/ruler.js"],
+    });
+
+    // Close the popup to not interfere with measurements
+    window.close();
+});
+
+fetchToolButton.addEventListener("click", async () => {
+    chrome.windows.create({
+        url: chrome.runtime.getURL("popup/popupFetch/popupFetch.html"),
+        type: "popup",
+        width: 800,
+        height: 900,
         focused: true,
     });
 });

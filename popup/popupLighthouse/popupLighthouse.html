@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Lighthouse Test - FEDevHelper</title>
+        <link rel="stylesheet" href="../../assets/styles/reset.css" />
+        <link rel="stylesheet" href="../../assets/styles/global.css" />
+        <link rel="stylesheet" href="./popupLighthouse.css" />
+    </head>
+    <body>
+        <div class="popup-lighthouse__window">
+            <div class="popup-lighthouse__header">
+                <h1>Lighthouse Test 🚦</h1>
+                <div class="popup-lighthouse__description">
+                    <p>Analyze website performance, accessibility, and best practices</p>
+                </div>
+            </div>
+
+            <div class="popup-lighthouse__content">
+                <div class="popup-lighthouse__section">
+                    <label for="popup-lighthouse__url" class="popup-lighthouse__label"
+                        >Website URL:</label
+                    >
+                    <input
+                        id="popup-lighthouse__url"
+                        class="popup-lighthouse__input"
+                        type="url"
+                        placeholder="https://example.com (or current tab URL)"
+                        readonly
+                    />
+                    <button
+                        id="popup-lighthouse__use-current"
+                        class="popup-lighthouse__button popup-lighthouse__button--small"
+                    >
+                        Use Current Tab
+                    </button>
+                </div>
+
+                <div class="popup-lighthouse__actions">
+                    <button
+                        id="popup-lighthouse__run-test"
+                        class="popup-lighthouse__button popup-lighthouse__button--primary"
+                    >
+                        Run Lighthouse Test
+                    </button>
+                    <button
+                        id="popup-lighthouse__clear-btn"
+                        class="popup-lighthouse__button popup-lighthouse__button--clear"
+                    >
+                        Clear Results
+                    </button>
+                </div>
+
+                <div class="popup-lighthouse__status" id="popup-lighthouse__status">
+                    <!-- Status messages will appear here -->
+                </div>
+
+                <div class="popup-lighthouse__results" id="popup-lighthouse__results">
+                    <!-- Results will appear here -->
+                </div>
+
+                <div class="popup-lighthouse__info">
+                    <h3>About Lighthouse Testing:</h3>
+                    <ul>
+                        <li><strong>Performance:</strong> Page load speed and optimization</li>
+                        <li>
+                            <strong>Accessibility:</strong> How accessible your site is to users
+                            with disabilities
+                        </li>
+                        <li><strong>Best Practices:</strong> Web development best practices</li>
+                        <li><strong>SEO:</strong> Search engine optimization basics</li>
+                    </ul>
+                    <p>
+                        <em
+                            >Note: This tool analyzes basic metrics. For full Lighthouse reports,
+                            use browser DevTools.</em
+                        >
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script src="./popupLighthouse.js"></script>
+    </body>
+</html>

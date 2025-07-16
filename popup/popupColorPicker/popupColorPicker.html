@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Color Picker - FEDevHelper</title>
+        <link rel="stylesheet" href="../../assets/styles/reset.css" />
+        <link rel="stylesheet" href="../../assets/styles/global.css" />
+        <link rel="stylesheet" href="./popupColorPicker.css" />
+    </head>
+    <body>
+        <div class="popup-color__window">
+            <div class="popup-color__header">
+                <h1>Color Picker 🎨</h1>
+                <div class="popup-color__description">
+                    <p>Pick colors and get their values in different formats</p>
+                </div>
+            </div>
+
+            <div class="popup-color__content">
+                <div class="popup-color__section">
+                    <label for="popup-color__picker" class="popup-color__label"
+                        >Choose Color:</label
+                    >
+                    <div class="popup-color__picker-container">
+                        <input
+                            type="color"
+                            id="popup-color__picker"
+                            class="popup-color__picker"
+                            value="#3b82f6"
+                        />
+                        <div class="popup-color__preview" id="popup-color__preview"></div>
+                    </div>
+                </div>
+
+                <div class="popup-color__section">
+                    <label class="popup-color__label">Color Values:</label>
+                    <div class="popup-color__values">
+                        <div class="popup-color__value-item">
+                            <label for="popup-color__hex" class="popup-color__value-label"
+                                >HEX:</label
+                            >
+                            <div class="popup-color__input-group">
+                                <input
+                                    type="text"
+                                    id="popup-color__hex"
+                                    class="popup-color__input"
+                                    readonly
+                                    value="#3b82f6"
+                                />
+                                <button
+                                    class="popup-color__copy-btn"
+                                    data-copy="hex"
+                                    title="Copy HEX value"
+                                >
+                                    📋
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="popup-color__value-item">
+                            <label for="popup-color__rgb" class="popup-color__value-label"
+                                >RGB:</label
+                            >
+                            <div class="popup-color__input-group">
+                                <input
+                                    type="text"
+                                    id="popup-color__rgb"
+                                    class="popup-color__input"
+                                    readonly
+                                    value="rgb(59, 130, 246)"
+                                />
+                                <button
+                                    class="popup-color__copy-btn"
+                                    data-copy="rgb"
+                                    title="Copy RGB value"
+                                >
+                                    📋
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="popup-color__value-item">
+                            <label for="popup-color__hsl" class="popup-color__value-label"
+                                >HSL:</label
+                            >
+                            <div class="popup-color__input-group">
+                                <input
+                                    type="text"
+                                    id="popup-color__hsl"
+                                    class="popup-color__input"
+                                    readonly
+                                    value="hsl(217, 91%, 60%)"
+                                />
+                                <button
+                                    class="popup-color__copy-btn"
+                                    data-copy="hsl"
+                                    title="Copy HSL value"
+                                >
+                                    📋
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="popup-color__value-item">
+                            <label for="popup-color__rgba" class="popup-color__value-label"
+                                >RGBA:</label
+                            >
+                            <div class="popup-color__input-group">
+                                <input
+                                    type="text"
+                                    id="popup-color__rgba"
+                                    class="popup-color__input"
+                                    readonly
+                                    value="rgba(59, 130, 246, 1)"
+                                />
+                                <button
+                                    class="popup-color__copy-btn"
+                                    data-copy="rgba"
+                                    title="Copy RGBA value"
+                                >
+                                    📋
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="popup-color__section">
+                    <label class="popup-color__label">Opacity:</label>
+                    <div class="popup-color__opacity-container">
+                        <input
+                            type="range"
+                            id="popup-color__opacity"
+                            class="popup-color__opacity-slider"
+                            min="0"
+                            max="1"
+                            step="0.01"
+                            value="1"
+                        />
+                        <span id="popup-color__opacity-value" class="popup-color__opacity-value"
+                            >100%</span
+                        >
+                    </div>
+                </div>
+
+                <div class="popup-color__section">
+                    <label class="popup-color__label">Color Palette:</label>
+                    <div class="popup-color__palette">
+                        <div
+                            class="popup-color__palette-item"
+                            data-color="#ef4444"
+                            title="#ef4444"
+                        ></div>
+                        <div
+                            class="popup-color__palette-item"
+                            data-color="#f97316"
+                            title="#f97316"
+                        ></div>
+                        <div
+                            class="popup-color__palette-item"
+                            data-color="#eab308"
+                            title="#eab308"
+                        ></div>
+                        <div
+                            class="popup-color__palette-item"
+                            data-color="#22c55e"
+                            title="#22c55e"
+                        ></div>
+                        <div
+                            class="popup-color__palette-item"
+                            data-color="#3b82f6"
+                            title="#3b82f6"
+                        ></div>
+                        <div
+                            class="popup-color__palette-item"
+                            data-color="#8b5cf6"
+                            title="#8b5cf6"
+                        ></div>
+                        <div
+                            class="popup-color__palette-item"
+                            data-color="#ec4899"
+                            title="#ec4899"
+                        ></div>
+                        <div
+                            class="popup-color__palette-item"
+                            data-color="#6b7280"
+                            title="#6b7280"
+                        ></div>
+                        <div
+                            class="popup-color__palette-item"
+                            data-color="#000000"
+                            title="#000000"
+                        ></div>
+                        <div
+                            class="popup-color__palette-item"
+                            data-color="#ffffff"
+                            title="#ffffff"
+                        ></div>
+                    </div>
+                </div>
+
+                <div class="popup-color__actions">
+                    <button
+                        id="popup-color__random-btn"
+                        class="popup-color__button popup-color__button--primary"
+                    >
+                        Random Color
+                    </button>
+                    <button
+                        id="popup-color__copy-all-btn"
+                        class="popup-color__button popup-color__button--secondary"
+                    >
+                        Copy All Values
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script src="./popupColorPicker.js"></script>
+    </body>
+</html>
