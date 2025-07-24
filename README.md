@@ -1,12 +1,12 @@
-# 🔎 FEDevHelper
+# FEDevHelper
 
 > **A comprehensive Chrome extension designed for front-end developers to enhance productivity and streamline workflows.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Version](https://img.shields.io/badge/version-0.0.1-blue.svg)](https://github.com/akarindt/FEDevHelper)
-[![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-green.svg)](https://chrome.google.com/webstore)
+[![Chrome Extension](https://img.shields.io/badge/Chrome-Extension-green.svg)](https://chromewebstore.google.com/detail/FEDevHelper/baeclcblbbhhmpjmglcpnpoagnmfiahn)
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Features](#features)
@@ -18,66 +18,68 @@
 - [License](#license)
 - [Author](#author)
 
-## 🎯 Overview
+## Overview
 
 FEDevHelper is a powerful Chrome extension that provides essential tools for front-end developers. Whether you're debugging, analyzing performance, or working with APIs, this extension offers a comprehensive suite of utilities right in your browser.
 
-## ✨ Features
+## Features
 
-### 🖊️ Font Detector
+### Font Detector
 
 - Identify fonts used on any webpage
 - Get detailed font family information
 - Perfect for design analysis and inspiration
 
-### ⏰ Load Time Checker
+### Load Time Checker
 
 - Measure website loading performance
 - Get detailed timing metrics
 - Optimize your web applications based on real data
 
-### 🔗 URI Encoder/Decoder
+### URI Encoder/Decoder
 
 - Encode and decode URIs with ease
 - Handle special characters and URL parameters
 - Essential for API development and debugging
 
-### 🎨 Color Picker
+### Color Picker
 
 - Pick colors from any webpage
 - Get color values in multiple formats (HEX, RGB, HSL)
 - Build consistent color palettes
 
-### 📄 JSON Formatter
+### JSON Formatter
 
 - Format, minify, and validate JSON data
 - Syntax highlighting for better readability
 - Perfect for API response analysis
 
-### 🚦 Lighthouse Test
+### Lighthouse Test
 
 - Quick website performance analysis
 - Built-in Lighthouse integration
 - Get actionable insights for optimization
 
-### 📏 Ruler Tool
+### Ruler Tool
 
 - Measure elements on any webpage
 - Get precise height and width measurements
 - Perfect for design verification and layout debugging
 
-### 🌐 Fetch Tool
+### Fetch Tool
 
 - Make HTTP requests directly from the extension
 - Postman-like functionality in your browser
 - Works with localhost for local development
 - Test APIs without leaving your current tab
 
-## 🚀 Installation
+## Installation
 
 ### From Chrome Web Store (Recommended)
 
-_Coming soon - Extension is currently in development_
+[![Install from Chrome Web Store](https://img.shields.io/badge/Install-Chrome%20Web%20Store-blue.svg)](https://chromewebstore.google.com/detail/FEDevHelper/baeclcblbbhhmpjmglcpnpoagnmfiahn)
+
+**[Install FEDevHelper from Chrome Web Store](https://chromewebstore.google.com/detail/FEDevHelper/baeclcblbbhhmpjmglcpnpoagnmfiahn)**
 
 ### Manual Installation (Developer Mode)
 
@@ -100,7 +102,7 @@ _Coming soon - Extension is currently in development_
     - Click "Load unpacked" and select the project folder
     - The extension will appear in your Chrome toolbar
 
-## 📖 Usage
+## Usage
 
 1. **Access the extension:** Click on the FEDevHelper icon in your Chrome toolbar
 2. **Select a tool:** Choose from the available tools in the popup
@@ -117,7 +119,7 @@ _Coming soon - Extension is currently in development_
 - **Ruler Tool:** Click and drag to measure elements on the page
 - **Fetch Tool:** Configure and send HTTP requests with full control
 
-## 🛠️ Development
+## Development
 
 ### Prerequisites
 
@@ -153,7 +155,7 @@ _Coming soon - Extension is currently in development_
 - **CSS3** - Modern styling with custom properties
 - **Chrome APIs** - Full integration with browser capabilities
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 FEDevHelper/
@@ -175,7 +177,7 @@ FEDevHelper/
 └── LICENSE               # MIT license
 ```
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Please follow these steps:
 
@@ -208,11 +210,11 @@ We welcome contributions! Please follow these steps:
 - Include browser version and extension version
 - Screenshots are helpful for UI issues
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👨‍💻 Author
+## Author
 
 **Akari** - [@akarindt](https://github.com/akarindt)
 
